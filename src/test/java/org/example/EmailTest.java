@@ -32,14 +32,28 @@ public class EmailTest {
 
     @Parameterized.Parameters
     public static Collection input() {
-        return Arrays.asList(new Object[][]{{"abc@yahoo.com", expectedResultEmailSuccess}, {"abc-100@yahoo.com", expectedResultEmailSuccess},
-                {"abc.100@yahoo.com", expectedResultEmailSuccess}, {"abc111@abc.com", expectedResultEmailSuccess}, {"abc-100@abc.net", expectedResultEmailSuccess},
-                {"abc.100@abc.com.au", expectedResultEmailSuccess}, {"abc@1.com", expectedResultEmailSuccess}, {"abc@gmail.com.com", expectedResultEmailSuccess},
-                {"abc+100@gmail.com", expectedResultEmailSuccess}, {"abc", expectedResultEmailFailure}, {"abc@.com.my", expectedResultEmailFailure}, {"abc123@gmail.a", expectedResultEmailFailure},
-                {"abc123@.com", expectedResultEmailFailure}, {"abc123@.com.com", expectedResultEmailFailure}, {".abc@abc.com", expectedResultEmailFailure},
-                {"abc()*@gmail.com", expectedResultEmailFailure}, {"abc@%*.com", expectedResultEmailFailure},
-                {"abc..2002@gmail.com", expectedResultEmailFailure}, {"abc@abc@gmail.com", expectedResultEmailFailure}, {"abc.@gmail.com", expectedResultEmailFailure},
-                {"abc@gmail.com.1a", expectedResultEmailFailure}, {"abc@gmail.com.aa.au", expectedResultEmailFailure}});
+        return Arrays.asList(new Object[][]{{"abc@yahoo.com", expectedResultEmailSuccess},
+                {"abc-100@yahoo.com", expectedResultEmailSuccess},
+                {"abc.100@yahoo.com", expectedResultEmailSuccess},
+                {"abc111@abc.com", expectedResultEmailSuccess},
+                {"abc-100@abc.net", expectedResultEmailSuccess},
+                {"abc.100@abc.com.au", expectedResultEmailSuccess},
+                {"abc@1.com", expectedResultEmailSuccess},
+                {"abc@gmail.com.com", expectedResultEmailSuccess},
+                {"abc+100@gmail.com", expectedResultEmailSuccess},
+                {"abc", expectedResultEmailFailure},
+                {"abc@.com.my", expectedResultEmailFailure},
+                {"abc123@gmail.a", expectedResultEmailFailure},
+                {"abc123@.com", expectedResultEmailFailure},
+                {"abc123@.com.com", expectedResultEmailFailure},
+                {".abc@abc.com", expectedResultEmailFailure},
+                {"abc()*@gmail.com", expectedResultEmailFailure},
+                {"abc@%*.com", expectedResultEmailFailure},
+                {"abc..2002@gmail.com", expectedResultEmailFailure},
+                {"abc@abc@gmail.com", expectedResultEmailFailure},
+                {"abc.@gmail.com", expectedResultEmailFailure},
+                {"abc@gmail.com.1a", expectedResultEmailFailure},
+                {"abc@gmail.com.aa.au", expectedResultEmailFailure}});
     }
 
     @Before
